@@ -3,6 +3,7 @@ class WeddingsController < ApplicationController
   # GET /weddings.json
   def index
     @weddings = Wedding.all
+  
 
     respond_to do |format|
       format.html # index.html.erb
