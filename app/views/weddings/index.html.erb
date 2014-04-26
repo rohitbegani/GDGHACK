@@ -7,6 +7,8 @@
     <th>Bride</th>
     <th>Longitude</th>
     <th>Latitude</th>
+    <th>Address</th>
+    <th>Description</th>
     <th></th>
   </tr>
 
@@ -17,6 +19,8 @@
     <td><%= wedding.bride %></td>
     <td><%= wedding.longitude %></td>
     <td><%= wedding.latitude %></td>
+    <td><%= wedding.address %></td>
+    <td><%= wedding.description %></td>
     <td><%= link_to 'Show', wedding %></td>
     <td><%= link_to 'Edit', edit_wedding_path(wedding) %></td>
     <td><%= link_to 'Destroy', wedding, method: :delete, data: { confirm: 'Are you sure?' } %></td>

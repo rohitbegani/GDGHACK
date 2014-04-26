@@ -6,6 +6,8 @@ class CreateWeddings < ActiveRecord::Migration
       t.string :bride
       t.float  :longitude
       t.float  :latitude
+      t.string :address
+      t.text   :description
 
 
       t.timestamps

@@ -16,13 +16,23 @@
 </p>
 
 <p>
+  <b>Latitude:</b>
+  <%= @wedding.latitude %>
+</p>
+
+<p>
   <b>Longitude:</b>
   <%= @wedding.longitude %>
 </p>
 
 <p>
-  <b>Latitude:</b>
-  <%= @wedding.latitude %>
+  <b>Address:</b>
+  <%= @wedding.address %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @wedding.description %>
 </p>
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
