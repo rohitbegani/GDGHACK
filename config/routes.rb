@@ -1,5 +1,8 @@
 Gdghack::Application.routes.draw do
 
+  resources :weddings
+
+
   devise_for :users
 
    root :to => "home#index"
