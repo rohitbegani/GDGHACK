@@ -1,9 +1,8 @@
 Gdghack::Application.routes.draw do
 
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
   resources :weddings
-
-
-  devise_for :users
 
    root :to => "home#index"
    match '/maps',        :to => 'map#index',        :as => 'maps'

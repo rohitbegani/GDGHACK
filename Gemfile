@@ -4,6 +4,8 @@ gem 'rails', '3.2.16'
 gem 'devise'
 gem 'gmaps4rails'
 gem "geocoder"
+gem 'omniauth'
+gem 'omniauth-google-oauth2' 
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
