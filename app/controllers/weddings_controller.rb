@@ -1,6 +1,9 @@
 class WeddingsController < ApplicationController
   # GET /weddings
   # GET /weddings.json
+ # before_filter :admin_user, :only => [:new, :create, :edit, :update, :destroy, :show]
+
+
   def index
     @weddings = Wedding.all
   
@@ -80,6 +83,11 @@ class WeddingsController < ApplicationController
       format.html { redirect_to weddings_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+   def admin_user
+    redirect_to home_path, notice: "sudo says: YOU SHALL NOT PASS!" unless current_user and current_user.admin?
   end
 
 end

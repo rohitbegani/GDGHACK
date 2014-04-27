@@ -10,7 +10,8 @@ Gdghack::Application.routes.draw do
   
   resources :weddings
 
-   root :to => "home#index"
+   root :to => "home_page#index"
+   match '/home',        :to => 'home_page#index',  :as => 'home'
    match '/maps',        :to => 'map#index',        :as => 'maps'
 
   # The priority is based upon order of creation:
