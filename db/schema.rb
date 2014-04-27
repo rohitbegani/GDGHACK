@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140427014927) do
+ActiveRecord::Schema.define(:version => 20140427050306) do
+
+  create_table "galleries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "paintings", :force => true do |t|
+    t.string   "name"
+    t.integer  "gallery_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "image"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

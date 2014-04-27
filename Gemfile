@@ -8,6 +8,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2' 
 gem "google-instant-hangouts" 
 gem 'google-analytics-rails'
+gem 'carrierwave'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
