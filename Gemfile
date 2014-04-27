@@ -6,6 +6,8 @@ gem 'gmaps4rails'
 gem "geocoder"
 gem 'omniauth'
 gem 'omniauth-google-oauth2' 
+gem "google-instant-hangouts" 
+gem 'google-analytics-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
