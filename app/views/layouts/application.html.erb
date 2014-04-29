@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
+<html lang="en">
 <head>
-  <title>Gdghack</title>
+  <title>Wedding Cocktails</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "bootstrap-theme", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <%= analytics_init if Rails.env.production? %>
 </head>
-<body>
-<% if user_signed_in? %>
-<%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-<%= instant_hangout %>
-<% else %>
-<%= link_to "Sign up", new_user_registration_path %> or
-<%= link_to "Sign in", new_user_session_path %>
-<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
-<% end %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<body class="container-fixed">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">   <!-- For navbar-->
 
+ <!-- Brand and toggle get grouped for better mobile display -->
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+    </button>
+  <div class="navbar-brand"><%= link_to image_tag("logo.png"), root_path, id: 'logo' %></div>
+     </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav navbar-right">
+          
+      <% if user_signed_in? %>
+          <li><%= link_to "Maps", maps_path%></li>
+          <li><%= link_to "Wedding", weddings_path%></li>
+          <li><%= link_to "Gallery", galleries_path%></li>
+          <li><%= link_to "Logout", destroy_user_session_path, :method => :delete  %></li>
+          <li><%= instant_hangout %></li>
+      <% else %> 
+          <li><%= link_to "Sign In", user_session_path %></li>
+          <li><%= link_to "SignUp", new_user_registration_path %></li>
+      <% end %>
+      </ul>
+     </div> 
+    </nav>
+   
 
 <%= yield %>
 

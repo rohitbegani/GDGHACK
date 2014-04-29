@@ -11,11 +11,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="form-group col-lg-2">
+    <%= f.text_field :name, :placeholder => "Name", :class=> "form-control"%>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

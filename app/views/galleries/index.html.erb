@@ -1,17 +1,11 @@
-<h1>Listing galleries</h1>
+<h1 class="text-center">Listing galleries</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table class="table table-striped">
 
 <% @galleries.each do |gallery| %>
-  <tr>
-    <td><%= gallery.name %></td>
-    <td><%= link_to 'Show', gallery %></td>
+  <tr class="table table-striped">
+    <td><h3><%= gallery.name %></h3></td> <br \>
+    <td><%= link_to 'Show', gallery %></td><br \>
     <td><%= link_to 'Edit', edit_gallery_path(gallery) %></td>
     <td><%= link_to 'Destroy', gallery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -20,4 +14,4 @@
 
 <br />
 
-<%= link_to 'New Gallery', new_gallery_path %>
+<h4 class="text-center"><i><%= link_to 'New Gallery', new_gallery_path %></i></h4>
